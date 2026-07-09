@@ -1,13 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>codeforcare</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <title>CodeForCare Lab Runner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="workspace">
+        <div class="panel">
+            <h1 id="lab-title">Loading Lab...</h1>
+            <div id="lab-description"></div>
+            <button id="run-btn">Run Test Cases</button>
+        </div>
+
+        <div class="panel">
+            <h2>Test Results</h2>
+            <div id="results">Click "Run Test Cases" to see results.</div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/app.js"></script>
+</body>
 </html>
