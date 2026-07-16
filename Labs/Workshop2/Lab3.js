@@ -1,17 +1,19 @@
 export const LabConfig = {
     type: "dom",
     
-    title: "Lab 1: The Grid & Box Challenge",
+    title: "Lab 3: URL links",
 
     description: `
         <h3>Problem Statement</h3>
         <p>
-        Build an HTML structure containing:
+        Build an HTML structure that:
         </p>
         <ul>
-            <li>A .grid-container</li>
-            <li>At least 3 .card elements</li>
-            <li>Each card needs an h3 and button</li>
+            <li> 
+                Has a button Linking to this video URL:
+                
+            </li>
+            
         </ul> `,
 
     solution: function(doc) {

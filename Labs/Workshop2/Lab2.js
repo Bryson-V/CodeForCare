@@ -1,17 +1,18 @@
 export const LabConfig = {
     type: "dom",
     
-    title: "Lab 1: The Grid & Box Challenge",
+    title: "Lab 2: Coloring Boxess",
 
     description: `
         <h3>Problem Statement</h3>
         <p>
-        Build an HTML structure containing:
+        Color and Resize following boxes:
         </p>
         <ul>
-            <li>A .grid-container</li>
-            <li>At least 3 .card elements</li>
-            <li>Each card needs an h3 and button</li>
+            <li>1. Color green</li>
+            <li>2. Resize 20px</li>
+            <li>3. Change Border Color light blue</li>
+            <li>3. Change Border Color light blue</li>
         </ul> `,
 
     solution: function(doc) {

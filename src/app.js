@@ -6,16 +6,21 @@ const title = document.getElementById("lab-title");
 const description = document.getElementById("lab-description");
 const results = document.getElementById("results");
 const runBtn = document.getElementById("run-btn");
+
 // Load student preview
 iframe.src = `./Labs/Workshop${workshopNum}/index${labNum}.html`;
+
 // Load lab configuration
 const labModule = await import(
     `/Labs/Workshop${workshopNum}/Lab${labNum}.js`
 );
+
 const LabConfig = labModule.LabConfig;
+
 // Display lab info
 title.textContent = LabConfig.title;
 description.innerHTML = LabConfig.description;
+
 // Run tests
 runBtn.addEventListener("click", () => {
     let allPassed = true;
@@ -60,7 +65,6 @@ runBtn.addEventListener("click", () => {
             </div>
             <hr>
         `;
-
     });
     results.innerHTML = `
         <h3>
