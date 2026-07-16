@@ -1,5 +1,3 @@
-import { json } from "express";
-
 /*
 Lab 1: Ticket Pricing (try-catch)
 
@@ -11,7 +9,7 @@ do not change anything else.
 */
 
 export const LabConfig = {
-  title: "Lab 2: try/catch",
+  title: "Lab 3: try/catch",
   description: `
     <h3>Problem Statement</h3>
     <p>Write a program that gives the factorial of the solution</p>
@@ -22,10 +20,10 @@ export const LabConfig = {
     { input: [11], expected: "Greaterthan10" },
     { input: [20], expected: "Greaterthan10" }
   ],
-  solution: function (age) {
+  solution: function (n) {
     // ---- CODE STARTS HERE ----
     try{
-      if(number>10)
+      if(n>10)
         throw new Error("number greater than 10");
       return "Lessthan10";
     }

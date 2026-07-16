@@ -7,44 +7,79 @@
 </head>
 <body>
 
-    <nav style="margin-bottom: 20px; padding: 10px; border-bottom: 1px solid #ccc;">
-        <strong>Select a Workshop:</strong>
-        <a href="?workshop=1" style="margin-left: 15px;">Workshop 1</a>
-        <a href="?workshop=2" style="margin-left: 15px;">Workshop 2</a>
-        <a href="?workshop=3" style="margin-left: 15px;">Workshop 3</a>
+    <!-- Workshop Navigation -->
+    <nav style="margin-bottom:20px;padding:10px;border-bottom:1px solid #ccc;">
+        <strong>Select Workshop:</strong>
+
+        <a id="workshop1" href="#" style="margin-left:15px;">Workshop 1</a>
+        <a id="workshop2" href="#" style="margin-left:15px;">Workshop 2</a>
+        <a id="workshop3" href="#" style="margin-left:15px;">Workshop 3</a>
     </nav>
 
-    <div class="workspace" style="display: flex; gap: 20px; padding: 20px;">
-        
-        <div class="panel" style="flex: 1;">
+    <!-- Lab Navigation -->
+    <nav style="margin-bottom:20px;padding:10px;border-bottom:1px solid #ccc;">
+        <strong>Select Lab:</strong>
+
+        <a id="lab1" href="#" style="margin-left:15px;">Lab 1</a>
+        <a id="lab2" href="#" style="margin-left:15px;">Lab 2</a>
+        <a id="lab3" href="#" style="margin-left:15px;">Lab 3</a>
+    </nav>
+
+    <div class="workspace" style="display:flex;gap:20px;padding:20px;">
+
+        <div class="panel" style="flex:1;">
             <h1 id="lab-title">Loading Lab...</h1>
+
             <div id="lab-description"></div>
-            <button id="run-btn">Run Test Cases</button>
+
+            <button id="run-btn">
+                Run Test Cases
+            </button>
         </div>
 
-        <div class="panel" style="flex: 1.5; border: 1px solid #ccc; padding: 15px; border-radius: 8px;">
+        <div class="panel"
+             style="flex:1.5;border:1px solid #ccc;padding:15px;border-radius:8px;">
+
             <h2>Live Preview</h2>
-            <iframe id="preview-frame" width="100%" height="600px"></iframe>
+
+            <iframe
+                id="preview-frame"
+                width="100%"
+                height="600">
+            </iframe>
+
         </div>
 
-        <div class="panel" style="flex: 1;">
+        <div class="panel" style="flex:1;">
             <h2>Test Results</h2>
-            <div id="results">Click "Run Test Cases" to see results.</div>
+
+            <div id="results">
+                Click "Run Test Cases" to see results.
+            </div>
         </div>
+
     </div>
 
     <script>
-        // 1. Get the 'workshop' number from the URL
-        const params = new URLSearchParams(window.location.search);
-        const workshopNum = params.get('workshop') || '1';
 
-        // 2. Set the iframe source dynamically to the HTML file in that folder
-        const iframe = document.getElementById('preview-frame');
-        // This assumes index.html is inside each Workshop folder
-        iframe.src = `/Labs/Workshop${workshopNum}/index.html`;
+        const params = new URLSearchParams(window.location.search);
+
+        const workshop = params.get("workshop") || "1";
+        const lab = params.get("lab") || "1";
+
+        // Workshop links
+        document.getElementById("workshop1").href = `?workshop=1&lab=${lab}`;
+        document.getElementById("workshop2").href = `?workshop=2&lab=${lab}`;
+        document.getElementById("workshop3").href = `?workshop=3&lab=${lab}`;
+
+        // Lab links
+        document.getElementById("lab1").href = `?workshop=${workshop}&lab=1`;
+        document.getElementById("lab2").href = `?workshop=${workshop}&lab=2`;
+        document.getElementById("lab3").href = `?workshop=${workshop}&lab=3`;
+
     </script>
 
     <script type="module" src="/src/app.js"></script>
-    
+
 </body>
 </html>
