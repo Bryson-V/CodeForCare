@@ -8,11 +8,11 @@ const results = document.getElementById("results");
 const runBtn = document.getElementById("run-btn");
 
 // Load student preview
-iframe.src = `./Labs/Workshop${workshopNum}/index${labNum}.html`;
+iframe.src = `../Labs/Workshop${workshopNum}/index${labNum}.html`;
 
 // Load lab configuration
 const labModule = await import(
-    `/Labs/Workshop${workshopNum}/Lab${labNum}.js`
+    `../Labs/Workshop${workshopNum}/Lab${labNum}.js`
 );
 
 const LabConfig = labModule.LabConfig;

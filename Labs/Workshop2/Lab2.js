@@ -1,40 +1,52 @@
 export const LabConfig = {
     type: "dom",
-    
-    title: "Lab 2: Coloring Boxess",
+
+    title: "Lab 2: Coloring Boxes",
 
     description: `
         <h3>Problem Statement</h3>
-        <p>
-        Color and Resize following boxes:
-        </p>
-        <ul>
-            <li>1. Color green</li>
-            <li>2. Resize 20px</li>
-            <li>3. Change Border Color light blue</li>
-            <li>3. Change Border Color light blue</li>
-        </ul> `,
 
-    solution: function(doc) {
-        const grid =
-            doc.querySelector(".grid-container");
-        if (!grid) {
-            return "Missing .grid-container";
+        <p>
+            Modify the highlighted box so that it matches the others.
+        </p>
+
+        <ul>
+            <li>Move the top left box 46px to the left.</li>
+            <li>Resize the top right to 40px tall.</li>
+            <li>Change the bottom left color to 0, 0, 0.</li>
+            <li>Rotate the bottom right  90 degrees.</li>
+        </ul>
+    `,
+
+    solution(doc) {
+
+        const targetBL = doc.querySelector("#targetBottomLeft");
+        const styleBL = getComputedStyle(targetBL);
+        if (styleBL.backgroundColor !== "rgb(0, 0, 0)") {
+            return "Bottom left target box should be Black";
         }
-        const cards =
-            grid.querySelectorAll(".card");
-        if (cards.length < 3) {
-            return `Missing cards (found ${cards.length}/3)`;
+        const targetTR = doc.querySelector("#targetTopRight");
+        const styleTR = getComputedStyle(targetTR);
+        if (styleTR.height !== "40px") {
+            return "Top right target box should be 40px tall";
         }
-        for (const card of cards) {
-            const heading =
-                card.querySelector("h3");
-            const button =
-                card.querySelector("button");
-            if (!heading || !button) {
-                return "Cards must contain an h3 and a button";
-            }
+        const targetTL = doc.querySelector("#targetTopLeft");
+        const styleTL = getComputedStyle(targetTL);
+        if (styleTL.left !== "46px") {
+            return "Top left target box should be 46px to the left";
         }
+
+        const targetBR = doc.querySelector("#targetBottomRight");
+        const styleBR = getComputedStyle(targetBR);
+        const matrix = styleBR.transform;
+
+        if (
+            matrix !== "matrix(0, 1, -1, 0, 0, 0)" &&
+            matrix !== "matrix(6.12323e-17, 1, -1, 6.12323e-17, 0, 0)"
+        ) {
+            return "Bottom Right target box should be rotated 90 degrees";
+        }
+        
         return "Pass";
     },
 

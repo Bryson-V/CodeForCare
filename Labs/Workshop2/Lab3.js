@@ -1,41 +1,43 @@
 export const LabConfig = {
     type: "dom",
-    
+
     title: "Lab 3: URL links",
 
     description: `
         <h3>Problem Statement</h3>
         <p>
-        Build an HTML structure that:
+            Build an HTML structure that:
         </p>
         <ul>
-            <li> 
-                Has a button Linking to this video URL:
-                
+            <li>
+                Has a button linking to this video URL:
+                <code>https://www.youtube.com/watch?v=dQw4w9WgXcQ</code>
             </li>
-            
-        </ul> `,
+        </ul>
+    `,
 
-    solution: function(doc) {
-        const grid =
-            doc.querySelector(".grid-container");
-        if (!grid) {
-            return "Missing .grid-container";
+    solution: function (doc) {
+        const REQUIRED_URL = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+
+        // Find the link
+        const link = doc.querySelector("a");
+
+        if (!link) {
+            return "Missing link";
         }
-        const cards =
-            grid.querySelectorAll(".card");
-        if (cards.length < 3) {
-            return `Missing cards (found ${cards.length}/3)`;
+
+        // Check the URL
+        if (link.href !== REQUIRED_URL) {
+            return `Incorrect URL (found ${link.href})`;
         }
-        for (const card of cards) {
-            const heading =
-                card.querySelector("h3");
-            const button =
-                card.querySelector("button");
-            if (!heading || !button) {
-                return "Cards must contain an h3 and a button";
-            }
+
+        // Check that the link contains a button
+        const button = link.querySelector("button");
+
+        if (!button) {
+            return "Link must contain a button";
         }
+
         return "Pass";
     },
 

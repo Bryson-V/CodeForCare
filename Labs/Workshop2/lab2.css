@@ -1,0 +1,50 @@
+#targetBottomRight{
+    position:absolute;
+    width:8px;
+    height:30px;
+    left:60px;
+    top:54px;
+    background:black;
+    /*Add Code Here:*/
+
+}
+
+#targetTopRight{
+    position:absolute;
+    width:8px;
+    height:50px;
+    left:60px;
+    top:32px;
+    background:black;
+     /*Add Code Here:*/
+
+
+
+}
+
+#targetBottomLeft{
+   position:absolute;
+    width:8px;
+    height:50px;
+    left:60px;
+    top:22px;
+    height:50px;
+    /*Add Code Here:*/
+
+
+
+
+}
+
+#targetTopLeft{
+    position:absolute;
+    width:8px;
+    height:50px;
+    top:22px;
+    height:50px;
+    background:black;    
+    /*Add Code Here:*/
+
+
+
+}
