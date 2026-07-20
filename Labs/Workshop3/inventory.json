@@ -1,4 +1,7 @@
-{
-    "item": "Wooden Shield",
-    "quantity": 1
-}
+[
+    {
+        "id": 1,
+        "item": "Wooden Shield",
+        "quantity": 1
+    }
+]

@@ -1,18 +1,26 @@
-//use URL http://localhost:3000/api/inventory when running
-//run npm run backend
+// RUN WITH: npm run backend
 
 import express from 'express';
 import cors from 'cors';
-import inventory from '../../src/inventory.json' with { type: 'json' };
+import path from 'path';
+
+import inventory from './inventory.json' with { type: 'json' };
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 const PORT = 3000;
 
-
-// Middleware
 app.use(express.json());
 app.use(cors());
 
-// GET Route: Fetch the whole inventory
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index1.html'));
+});
+
+// GET: Fetch the whole inventory
 app.get('/api/inventory', (req, res) => {
     console.log("\n--- GET REQUEST RECEIVED ---");
     console.log("Current Inventory being sent to user:", inventory);
@@ -20,32 +28,29 @@ app.get('/api/inventory', (req, res) => {
     res.status(200).json(inventory);
 });
 
-// POST Route: Add a new item to the inventory
+// POST: Add a new item to the inventory
 app.post('/api/inventory', (req, res) => {
-    console.log("\n--- POST REQUEST RECEIVED ---");
-    console.log("Inventory BEFORE adding item:", inventory);
-    console.log("Item data sent by user:", req.body);
-
-    // Form the new object
     const newItem = {
         id: inventory.length + 1,
         item: req.body.item,
         quantity: req.body.quantity
     };
 
-    // Push it into our mock database array
-    inventory.push(newItem);
+    inventory.push(newItem); // Push your new item to the fake database
 
-    // Print what the inventory looks like AFTER the addition
-    console.log("Inventory AFTER adding item:", inventory);
-    console.log("-----------------------------\n");
-
-    // Respond to the client
-    res.status(201).json(newItem);
+    res.status(200).json({
+        message: "Item added successfully!",
+        addedItem: newItem,
+        currentInventory: inventory
+    });
 });
 
 // Server listener
 app.listen(PORT, () => {
-    console.log(`Backend server is running on http://localhost:${PORT}`);
+    // Website for users to interact with
+    console.log(`Website: http://localhost:${PORT}`);
+    
+    // API endpoint used by the website to GET (retrieve) and POST (add) data to the inventory JSON file
+    console.log(`API:     http://localhost:${PORT}/api/inventory`);
     console.log("Press Ctrl + C to stop the server");
 });

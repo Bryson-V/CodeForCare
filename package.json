@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "backend": "node src/server.js",
+    "backend": "node Labs/Workshop3/server.js",
     "build": "vite build",
     "preview": "vite preview"
   },

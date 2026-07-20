@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Demo</title>
+</head>
+<body>
+
+<h1>Inventory Demo</h1>
+
+<h2>Current Inventory</h2>
+
+<ul id="inventoryList"></ul>
+
+<hr>
+
+<h2>Add New Item</h2>
+
+<label>Item Name:</label>
+<input id="item" type="text">
+
+<br><br>
+
+<label>Quantity:</label>
+<input id="quantity" type="number">
+
+<br><br>
+
+<button onclick="addItem()">Add Item</button>
+
+<script>
+
+async function loadInventory() {
+
+    const response = await fetch("/api/inventory");
+    const inventory = await response.json();
+
+    const list = document.getElementById("inventoryList");
+    list.innerHTML = "";
+
+    inventory.forEach(product => {
+
+        const li = document.createElement("li");
+
+        li.textContent =
+            `${product.id}. ${product.item} (Qty: ${product.quantity})`;
+
+        list.appendChild(li);
+
+    });
+
+}
+
+async function addItem() {
+
+    const item = document.getElementById("item").value;
+    const quantity = Number(document.getElementById("quantity").value);
+
+    if(item === "" || quantity <= 0){
+        alert("Please enter a valid item and quantity.");
+        return;
+    }
+
+    await fetch("/api/inventory", {
+
+        method: "POST",
+
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+            item,
+            quantity
+        })
+
+    });
+
+    document.getElementById("item").value = "";
+    document.getElementById("quantity").value = "";
+    
+    loadInventory();
+}
+
+loadInventory();
+
+</script>
+
+</body>
+</html>
