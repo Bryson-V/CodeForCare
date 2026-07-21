@@ -21,14 +21,6 @@ export const LabConfig = {
 
     // ---- CODE STARTS HERE ----
 
-    let ret = 1;
-
-    for (let i = 1; i <= n; i++) {
-      ret *= i;
-    }
-
-    return ret;
-
     // ---- CODE ENDS HERE ----
   }
 };

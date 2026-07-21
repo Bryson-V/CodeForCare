@@ -22,18 +22,6 @@ export const LabConfig = {
   solution: function (age) {
     // ---- CODE STARTS HERE ----
     
-    if (age <= 5) {
-      return 0;
-    } 
-    else if (age <= 17) {
-      return 10;
-    } 
-    else if (age <= 64) {
-      return 20;
-    } 
-    else {
-      return 12;
-    }
     // ---- CODE ENDS HERE ----
   }
 };

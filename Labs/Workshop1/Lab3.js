@@ -22,15 +22,6 @@ export const LabConfig = {
   ],
   solution: function (n) {
     // ---- CODE STARTS HERE ----
-    try{
-      if(n>10)
-        throw new Error("number greater than 10");
-      return "Lessthan10";
-    }
-    catch (e){
-        console.log(e);
-        return "Greaterthan10";
-    } 
 
     // ---- CODE ENDS HERE ----
   }
