@@ -6,10 +6,9 @@ What to do for this lab
     3. Have an h3 and button in each card
 
 Hints:
-
 */
 
-
+//Don't need to edit any of the below. 
 export const LabConfig = {
     type: "dom",
     

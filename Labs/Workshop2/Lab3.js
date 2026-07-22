@@ -12,6 +12,7 @@ Easiest to visualize with _blank
 Don't overthink this, the lab can be completed within less than 10 lines added.
 */
 
+//Don't need to edit any of the below. 
 export const LabConfig = {
     type: "dom",
 

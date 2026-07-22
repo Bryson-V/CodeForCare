@@ -1,5 +1,5 @@
 /*
-What to edit:
+edit:
     Lab2.css
 What to do:
     1. Move the top left box 46px to the left. 
@@ -16,6 +16,8 @@ For part 4, use transform.rotation
 
 */
 
+
+//Don't need to edit any of the below. 
 export const LabConfig = {
     type: "dom",
 
