@@ -36,8 +36,6 @@ TL;DR
 5. If the input is invalid, throw an error and return "Invalid input".
 */
 
-import fs from "node:fs";
-
 export const LabConfig = {
   title: "Lab 3: try/catch",
   description: `
@@ -51,7 +49,7 @@ export const LabConfig = {
     { input: ["hello"], expected: "Invalid input" },
     { input: ["abc123"], expected: "Invalid input" },
   ],
-  solution: function (n) {//Use input n
+  solution: function (n) {// Use input n
     //Hints:
     /*
     use try to read input
@@ -63,12 +61,3 @@ export const LabConfig = {
     // ---- CODE ENDS HERE ----
   }
 };
-
-{
-  const buffer = Buffer.alloc(100);
-  const bytesRead = fs.readSync(0, buffer, 0, 100, null);
-  const textTyped = buffer.toString('utf8', 0, bytesRead).trim();
-  const n = textTyped;
-
-  console.log(LabConfig.solution(n));
-}

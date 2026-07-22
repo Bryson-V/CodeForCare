@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CodeForCare Lab Runner</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
 
@@ -68,14 +68,19 @@
         const lab = params.get("lab") || "1";
 
         // Workshop links
-        document.getElementById("workshop1").href = `?workshop=1&lab=${lab}`;
-        document.getElementById("workshop2").href = `?workshop=2&lab=${lab}`;
-        document.getElementById("workshop3").href = `?workshop=3&lab=${lab}`;
+        document.getElementById("workshop1").href = `?workshop=1&lab=1`;
+        document.getElementById("workshop2").href = `?workshop=2&lab=1`;
+        document.getElementById("workshop3").href = `?workshop=3&lab=1`;
 
         // Lab links
         document.getElementById("lab1").href = `?workshop=${workshop}&lab=1`;
         document.getElementById("lab2").href = `?workshop=${workshop}&lab=2`;
         document.getElementById("lab3").href = `?workshop=${workshop}&lab=3`;
+
+        if (workshop === "3") {
+            document.getElementById("lab2").style.display = "none";
+            document.getElementById("lab3").style.display = "none";
+        }
 
     </script>
 
