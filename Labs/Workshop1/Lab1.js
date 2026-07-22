@@ -32,30 +32,25 @@ export const LabConfig = {
     readFromTerminal.question("Enter age: ", (input) => {
       const age = Number(input);
     })
-    // ---- CODE STARTS HERE ----
-    
     /*
-
     For now work with the test cases:
     If age is between 0 and 3, cost of ticket will be $0
     use the other test cases to help you determine the
     cost of the tickets
 
     EX:
-    { input: [3], expected: 0 },
-    { input: [12], expected: 10 },
-    { input: [45], expected: 20 },
-    { input: [65], expected: 12 }
+    If the age is between 0 and 5, the cost of ticket will be $0,
+    if the age is between 5 and 15, the cost of the ticket will be $10,
+    if the age is between 15 and 50, the cost of the ticket will be $20,
+    if the age is greater than 50, the cost of the ticket will be $12.
 
-    age: 0-3
-    cost of ticket: $0
-
-    now try and use an if else to try and calculate the cost of
-    the tickets
-
+    Now try to see if you translate this to code and calculate the
+    remaining ticket prices
     */
+    
+    // ---- CODE STARTS HERE ----
 
     // ---- CODE ENDS HERE ----
-    rl.solution(); // If you want to check your solution include this line
+    rl.solution();
   }
 };

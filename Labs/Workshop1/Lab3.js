@@ -1,11 +1,20 @@
 /*
-Lab 1: Ticket Pricing (try-catch)
+Lab 3: Try and catch
 
-Drag and drop this lab to the src file in the template CodeForCare
-folder to run test cases.
+How try/catch works:
+Think of "try" as a batter swinging their bat, this is equivalent
+to you trying to run some code.
+If an error happens (like the batter misses the ball), JavaScript
+throws an error instead of crashing your whole program.
+The "catch" portion acts like a referee by catching the mistake and
+deciding what to do next
 
-Only edit the code where it says code start here and end here,
-do not change anything else.
+TL;DR
+Rules for this lab:
+1. Inside the 'try' block, check if the input number (n) is greater than 10.
+2. If n is greater than 10, manually throw an error using: throw new Error("Greaterthan10");
+3. If n is 10 or less, just return the string "Lessthan10".
+4. If an error is caught in the 'catch' block, return the error's message ("Greaterthan10").
 */
 
 export const LabConfig = {
