@@ -14,4 +14,4 @@ function calculateAverageScore(scores) {
 }
 
 let studentScores = ["80", "90", "100"];
-console.log(calculateAverageScore(studentScores));
+console.log(calculateAverageScore(studentScores)); // What's the result?
