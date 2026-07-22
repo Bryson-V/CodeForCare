@@ -1,8 +1,9 @@
 function calculateDiscount(userAge, cartTotal) {
   let discount = 0;
 
+  // Find the 2 errors in the code
   // Rule 1: Seniors (65+) get $20 off
-  // Students (under 18) get $10 off
+  // Rule 2: Students (under 18) get $10 off
 
   if (userAge = 65) {
     discount = 20;
