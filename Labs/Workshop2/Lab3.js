@@ -1,3 +1,17 @@
+/*
+Edit: index3.html
+
+What to do:
+    1. Add button
+    2. In button, add a reference to this link
+Expected:
+The button will either pop up the link in a new tab, or use miniplayer
+
+Hint:
+Easiest to visualize with _blank
+Don't overthink this, the lab can be completed within less than 10 lines added.
+*/
+
 export const LabConfig = {
     type: "dom",
 

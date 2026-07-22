@@ -1,3 +1,15 @@
+/*
+Work for this lab will be done through index1.html
+What to do for this lab
+    1. Create a grid containter
+    2. Put 3 card elements in this container
+    3. Have an h3 and button in each card
+
+Hints:
+
+*/
+
+
 export const LabConfig = {
     type: "dom",
     

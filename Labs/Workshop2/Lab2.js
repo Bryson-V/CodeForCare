@@ -1,3 +1,21 @@
+/*
+What to edit:
+    Lab2.css
+What to do:
+    1. Move the top left box 46px to the left. 
+    2. Resize the top right to 40px tall.
+    3. Change the bottom left color to 0, 0, 0.
+    4. Rotate the bottom right  90 degrees.
+Add the changes under each target.
+
+Hint:
+Each change can be made through one line additions
+Do not change currently existing code, just add.
+For part 1-3, can look at examples from other targets, where it was already done
+For part 4, use transform.rotation
+
+*/
+
 export const LabConfig = {
     type: "dom",
 
