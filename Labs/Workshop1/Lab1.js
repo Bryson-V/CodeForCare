@@ -1,9 +1,6 @@
 /*
 Lab 1: Ticket Pricing (If/Else Logic)
 
-Drag and drop this lab to the src file in the template CodeForCare
-folder to run test cases.
-
 Only edit the code where it says code start here and end here,
 do not change anything else.
 */
