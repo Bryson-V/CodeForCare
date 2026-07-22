@@ -1,12 +1,10 @@
-/* Style the grid to display cards side-by-side */
+/*Don't need to edit any of the below. */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   margin-top: 20px;
 }
-
-/* Style individual cards to look like distinct boxes */
 .card {
   background-color: #ffffff;
   border: 1px solid #e2e8f0;
