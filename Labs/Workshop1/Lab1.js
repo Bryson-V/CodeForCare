@@ -1,10 +1,23 @@
 /*
-Lab 1: Ticket Pricing (If/Else Logic)
+  Lab 1: Ticket Pricing (If/Else Logic)
 
-Only edit the code where it says code start here and end here,
-do not change anything else.
+  ONLY edit the code where it says code start here and end here,
+  do not change anything else.
+
+  For now work with the test cases:
+  If age is between 0 and 3, cost of ticket will be $0
+  use the other test cases to help you determine the
+  cost of the tickets
+
+  EX:
+  If the age is between 0 and 5, the cost of ticket will be $0,
+  if the age is between 5 and 15, the cost of the ticket will be $10,
+  if the age is between 15 and 50, the cost of the ticket will be $20,
+  if the age is greater than 50, the cost of the ticket will be $12.
+
+  Now try to see if you translate this to code and calculate the
+  remaining ticket prices
 */
-import readline from "node:readline"
 
 export const LabConfig = {
   title: "Lab 1: Amusement Park Ticket Pricing",
@@ -18,39 +31,20 @@ export const LabConfig = {
     { input: [45], expected: 20 },
     { input: [65], expected: 12 }
   ],
-  solution: function (age) { //Use age as input.
+  solution: function (age) { // Use age as input.
+
     // General idea is that if you want to use input given to function, 
     // you can use the argument in function declaration. 
     //Ex: if working with input being 3, can use age instead.  the variable age will contain 3 already.
-    const readline = require('readline');
 
-    const rl = readline.createInterface({
-      input: process.stdin,
-      output: process.stdout,
-    });
-
-    readFromTerminal.question("Enter age: ", (input) => {
-      const age = Number(input);
-    })
-    /*
-    For now work with the test cases:
-    If age is between 0 and 3, cost of ticket will be $0
-    use the other test cases to help you determine the
-    cost of the tickets
-
-    EX:
-    If the age is between 0 and 5, the cost of ticket will be $0,
-    if the age is between 5 and 15, the cost of the ticket will be $10,
-    if the age is between 15 and 50, the cost of the ticket will be $20,
-    if the age is greater than 50, the cost of the ticket will be $12.
-
-    Now try to see if you translate this to code and calculate the
-    remaining ticket prices
-    */
-    
     // ---- CODE STARTS HERE ----
-
+    if (age < 5) {
+      return 0;
+    } else if (age < 15) {
+      return 10;
+    } else if (age < 50) {
+      return 20;
+    } else return 12;
     // ---- CODE ENDS HERE ----
-    rl.solution();
   }
 };

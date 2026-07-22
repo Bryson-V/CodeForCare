@@ -21,8 +21,6 @@ TL;DR
 4. After the loop finishes: Return the final 'solution' variable.
 */
 
-import fs from "node:fs";
-
 export const LabConfig = {
   title: "Lab 2: Factorials",
 
@@ -59,14 +57,3 @@ export const LabConfig = {
     return solution;
   }
 };
-
-{
-  const buffer = Buffer.alloc(100);
-  const bytesRead = fs.readSync(0, buffer, 0, 100, null);
-  const textTyped = buffer.toString('utf8', 0, bytesRead).trim();
-  const n = parseInt(textTyped, 10);
-
-  if (!isNaN(n) && n >= 0) {
-    LabConfig.solution(n);
-  }
-}
