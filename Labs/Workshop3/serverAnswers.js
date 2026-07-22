@@ -25,19 +25,16 @@ app.get('/api/inventory', (req, res) => {
     console.log("\n--- GET REQUEST RECEIVED ---");
     console.log("Current Inventory being sent to user:", inventory);
     
-    /* 
-    Call the res function from the API's GET to fetch the inventory
-
-    res.something.morethings
-    */
+    res.status(200).json(inventory);
 });
 
 // POST: Add a new item to the inventory
 app.post('/api/inventory', (req, res) => {
-    // Create an object so you can pass into the inventory through the API
-    // ---- CODE STARTS HERE ----
-
-    // ---- CODE ENDS HERE ----
+    const newItem = {
+        id: inventory.length + 1,
+        item: req.body.item,
+        quantity: req.body.quantity
+    };
 
     inventory.push(newItem); // Push your new item to the fake database
 
