@@ -39,10 +39,20 @@ export const LabConfig = {
   ],
 
   solution: function(n) {
-    let solution = 1;
+    //Use n as input.  
+    // General idea is that if you want to use input given to function, 
+    // you can use the argument in function declaration
 
+    
+    /*Hints:
+    Write a for loop which increments the multiplication. 
+    Start with 1, increment until the input
+    Multiply the counter number with the solution to create the factorial
+    */
+
+    let solution = 1;//Use this to track the solution/expected number
     // ---- CODE STARTS HERE ----
-
+    
     // ---- CODE ENDS HERE ----
 
     console.log(solution);

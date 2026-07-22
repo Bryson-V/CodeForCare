@@ -51,7 +51,13 @@ export const LabConfig = {
     { input: ["hello"], expected: "Invalid input" },
     { input: ["abc123"], expected: "Invalid input" },
   ],
-  solution: function (n) {
+  solution: function (n) {//Use input n
+    //Hints:
+    /*
+    use try to read input
+    catch if something other than a number was inputted.
+    IMPORTANT: Remember to cast input(string) into a number(int)
+    */ 
     // ---- CODE STARTS HERE ----
     
     // ---- CODE ENDS HERE ----

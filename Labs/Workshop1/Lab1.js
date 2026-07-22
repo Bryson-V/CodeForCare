@@ -21,7 +21,10 @@ export const LabConfig = {
     { input: [45], expected: 20 },
     { input: [65], expected: 12 }
   ],
-  solution: function (age) {
+  solution: function (age) { //Use age as input.
+    // General idea is that if you want to use input given to function, 
+    // you can use the argument in function declaration. 
+    //Ex: if working with input being 3, can use age instead.  the variable age will contain 3 already.
     const readline = require('readline');
 
     const rl = readline.createInterface({
