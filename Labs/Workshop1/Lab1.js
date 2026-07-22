@@ -38,13 +38,7 @@ export const LabConfig = {
     //Ex: if working with input being 3, can use age instead.  the variable age will contain 3 already.
 
     // ---- CODE STARTS HERE ----
-    if (age < 5) {
-      return 0;
-    } else if (age < 15) {
-      return 10;
-    } else if (age < 50) {
-      return 20;
-    } else return 12;
+    
     // ---- CODE ENDS HERE ----
   }
 };

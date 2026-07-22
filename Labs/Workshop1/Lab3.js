@@ -49,7 +49,7 @@ export const LabConfig = {
     { input: ["hello"], expected: "Invalid input" },
     { input: ["abc123"], expected: "Invalid input" },
   ],
-  solution: function (n) {//Use input n
+  solution: function (n) {// Use input n
     //Hints:
     /*
     use try to read input

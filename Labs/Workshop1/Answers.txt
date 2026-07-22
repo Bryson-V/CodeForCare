@@ -6,3 +6,21 @@ Lab1
     } else if (age < 50) {
       return 20;
     } else return 12;
+
+Lab2
+    for (let i = 1; i <= n; i++) {
+      solution *= i;
+    }
+
+Lab3
+    try {
+      const num = Number(n);
+
+      if (isNaN(num) || n === "") {
+        throw new Error("Invalid input");
+      }
+      return num * 2;
+
+    } catch (error) {
+      return "Invalid input";
+    }
