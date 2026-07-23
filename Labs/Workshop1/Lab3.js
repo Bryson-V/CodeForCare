@@ -40,7 +40,7 @@ export const LabConfig = {
   title: "Lab 3: try/catch",
   description: `
     <h3>Problem Statement</h3>
-    <p>Write a program that returns if it is less than 10 OR greater than 10</p>
+    <p>Write a program that checks to see if the input was just a number.  Return Invalid input if not, and return 2* the input if it is a number</p>
   `,
   testCases: [
     { input: ["20"], expected: 40 },
