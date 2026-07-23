@@ -1,0 +1,33 @@
+What does the following do?
+
+1.
+button{
+    background: lightblue;
+    border: 12px solid black;
+}
+
+2.
+h1 {
+    color: red;
+    font-size: 24px;
+    text-align: center;
+}
+
+3.
+.box {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    margin: 10px;
+}
+
+4.
+a {
+    color: green;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+    text-decoration: underline;
+}
