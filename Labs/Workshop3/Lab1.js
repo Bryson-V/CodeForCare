@@ -9,7 +9,11 @@ export const LabConfig = {
     </p>
     <p>
       Open <code>Labs/Workshop3</code> in a terminal and run
-      <code>node server.js</code>. Then open <code>http://localhost:3000/</code>.
+      <code>node API.js</code>. Then open <code>http://localhost:3000/</code>.
+      Note:  Assuming you are in codeforcare folder(same folder to run node server.js), can type <br>
+      cd Labs<br>
+      cd Workshop3<br>
+      node API.js<br>
     </p>
   `,
   testCases: []
