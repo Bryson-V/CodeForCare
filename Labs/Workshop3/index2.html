@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EmailJS Test</title>
+  <!-- EmailJS SDK via CDN -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+  <h2>EmailJS Test</h2>
+  <button id="test-btn" onclick="sendTestEmail()">Send Test Email</button>
+  <p id="status"></p>
+
+  <script>
+    let config = {};
+
+    // Load credentials from JSON file when the page loads
+    async function loadCredentials() {
+      try {
+        const response = await fetch('./credentials.json');
+        config = await response.json();
+        
+        emailjs.init(config.PUBLIC_KEY);
+        console.log("Credentials loaded successfully.");
+      } catch (error) {
+        console.error("Error loading credentials.json:", error);
+      }
+    }
+    loadCredentials();
+
+    function sendTestEmail() {
+      const statusEl = document.getElementById("status");
+      statusEl.innerText = "Sending...";
+
+      const templateParams = {
+        name: "Test User",
+        time: new Date().toLocaleString(),
+        message: "This is a quick test email from EmailJS!",
+        email: "randomemail51324@gmail.com" 
+      };
+
+      // Send using values loaded from config.emailjs
+      emailjs.send(config.SERVICE_ID, config.TEMPLATE_ID, templateParams)
+        .then(function(response) {
+           console.log('SUCCESS!', response.status, response.text);
+           statusEl.innerText = "Email sent successfully!";
+        }, function(error) {
+           console.error('FAILED...', error);
+           statusEl.innerText = "Failed to send email: " + JSON.stringify(error);
+        });
+    }
+  </script>
+</body>
+</html>
