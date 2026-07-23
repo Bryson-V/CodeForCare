@@ -57,7 +57,14 @@ export const LabConfig = {
     IMPORTANT: Remember to cast input(string) into a number(int)
     */ 
     // ---- CODE STARTS HERE ----
-    
+    try{
+      if(n<10)
+        throw new error("LessThan10");
+
+    }
+    catch(e){
+
+    }
     // ---- CODE ENDS HERE ----
   }
 };

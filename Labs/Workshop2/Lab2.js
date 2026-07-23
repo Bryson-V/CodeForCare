@@ -1,19 +1,21 @@
 /*
+Don't need to Edit this file!
+
 edit:
     Lab2.css
 What to do:
     1. Move the top left box 46px to the left. 
     2. Resize the top right to 40px tall.
-    3. Change the bottom left color to 0, 0, 0.
+    3. Change the bottom left color to 0, 0, 1.
     4. Rotate the bottom right  90 degrees.
 Add the changes under each target.
 
 Hint:
 Each change can be made through one line additions
 Do not change currently existing code, just add.
-For part 1-3, can look at examples from other targets, where it was already done
-For part 4, use transform.rotation
-
+For part 1-2, can look at examples from other targets, where it was already done for you
+For part 3, you can use background: rgb(parameters)
+For part 4, use transform: rotation(#deg)
 */
 
 
@@ -33,7 +35,7 @@ export const LabConfig = {
         <ul>
             <li>Move the top left box 46px to the left.</li>
             <li>Resize the top right to 40px tall.</li>
-            <li>Change the bottom left color to 0, 0, 0.</li>
+            <li>Change the bottom left color to 0, 0, 1.</li>
             <li>Rotate the bottom right  90 degrees.</li>
         </ul>
     `,
@@ -42,7 +44,7 @@ export const LabConfig = {
 
         const targetBL = doc.querySelector("#targetBottomLeft");
         const styleBL = getComputedStyle(targetBL);
-        if (styleBL.backgroundColor !== "rgb(0, 0, 0)") {
+        if (styleBL.backgroundColor !== "rgb(0, 0, 1)") {
             return "Bottom left target box should be Black";
         }
         const targetTR = doc.querySelector("#targetTopRight");

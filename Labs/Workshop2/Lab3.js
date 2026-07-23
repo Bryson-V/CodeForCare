@@ -1,4 +1,6 @@
 /*
+Don't need to Edit this file!
+
 Edit: index3.html
 
 What to do:
@@ -9,7 +11,11 @@ The button will either pop up the link in a new tab, or use miniplayer
 
 Hint:
 Easiest to visualize with _blank
-Don't overthink this, the lab can be completed within less than 10 lines added.
+Don't overthink this, the lab can be completed within less than 5 lines added.
+Add a link with <a href="link"></a>
+add a button which is in <button></button>
+can have button be accessing the link
+<a><button></button></a>
 */
 
 //Don't need to edit any of the below. 
