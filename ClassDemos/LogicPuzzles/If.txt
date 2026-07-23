@@ -1,0 +1,55 @@
+Explain what the output is.  Also what the code does.
+1. Easy
+
+let x = prompt("Enter a fruit")
+if(x=="bannana")
+    console.log("Fruit is a bannana")
+else if(x=="apple")
+    console.log("Fruit is an apple")
+else if(x=="orange")
+    console.log("Fruit is an orange")
+else
+    console.log("Fruit not listed")
+
+
+2. Medium  (What is the output?)
+
+let x = "10";
+
+if(x===10){
+    console.log("First choice");
+}
+if(x==10){
+    console.log("Second choice");
+}
+if(Number(x)==10){
+    console.log("Third choice");
+}
+
+
+3. Hard
+Note: 
+|| means or.  if first part or second part is true, then accepted
+&& means and.  Needs both first and second part to be true.
+! means not.  If looking for false, now look for true
+!= means not equal. Is true if two are not equal
+
+let a = 5;
+let b = 10;
+let c = "5";
+
+if (a = c) {
+    console.log("Step 1");
+}
+if (a === c || b > 15) {
+    console.log("Step 2");
+} 
+else if (a == 5 && b === 10) {
+    console.log("Step 3");
+} 
+else {
+    console.log("Step 4");
+}
+if (!(a != 5)) {
+    console.log("Step 5");
+}

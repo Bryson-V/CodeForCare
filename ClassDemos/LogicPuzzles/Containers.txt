@@ -1,0 +1,50 @@
+Connects the JS with HTML.  While we didn't cover it, try to see if you can understand it.
+
+1. Easy:
+// HTML: <div id="box" class="card active"></div>
+
+let box = document.getElementById("box");
+
+if (box.classList.contains("active")) {
+    console.log("Box is active");
+} else {
+    console.log("Box is inactive");
+}
+
+
+2. Medium:
+// HTML: 
+// <div class="container"></div>
+// <div class="container active-container"></div>
+// <div class="container"></div>
+
+let containers = document.getElementsByClassName("container");
+
+if (containers.length === 3) {
+    console.log("Correct count");
+}
+
+if (containers[1].classList.contains("active-container")) {
+    console.log("Second container is active");
+} else {
+    console.log("Second container is standard");
+}
+
+3. Hard:
+// HTML:
+// <div id="parent" class="wrapper">
+//     <div class="child inner"></div>
+// </div>
+
+let parentDiv = document.getElementById("parent");
+let firstChild = parentDiv.firstElementChild;
+
+if (parentDiv.children.length > 1 || parentDiv.hasChildNodes()) {
+    console.log("Condition Alpha");
+}
+
+if (firstChild.matches("div.inner") && !firstChild.parentElement.id === "main") {
+    console.log("Condition Beta");
+} else {
+    console.log("Condition Gamma");
+}

@@ -1,0 +1,31 @@
+Which link is done properly?
+
+1. <a href="Link"> Link </a>
+2. <a source="Link"> Link </a>
+3. <a> "Link" </a>
+
+Which picture is done properly?
+
+1. <img href="Link" alt="Description"> 
+2. <img source="Link" alt="Description">  
+3. <img alt="Description"> "Link" </img>
+
+Which of the following are correct?
+
+1.
+<a href="https://example.com">
+    <img src="image.jpg" alt="A descriptive text of the image">
+</a>
+
+2.
+<figure>
+    <img src="image.jpg" alt="A descriptive text of the image">
+    <figcaption>Check out <a href="https://example.com">this link</a> for more details.</figcaption>
+</figure>
+
+3.
+<picture>
+    <source srcset="image.webp" type="image/webp">
+    <img src="image.jpg" alt="A descriptive text of the image">
+</picture>
+<a href="https://example.com" target="_blank" rel="noopener noreferrer">Visit Site</a>

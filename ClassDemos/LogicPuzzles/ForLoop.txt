@@ -1,0 +1,28 @@
+Break Problem down into words.  Figure out what it does
+
+1. Easy:
+
+
+for(let i = 10; i>0; i--)
+{
+    console.log(`The Rocket ship is launching in ${i} seconds`);
+}
+
+2. Medium
+
+
+let powerLevel = 0;
+for (let ingredient = 1; ingredient <= 5; ingredient++) {
+    powerLevel += 10;
+    console.log(`Added ingredient ${ingredient}. Power is now ${powerLevel}!`);
+}
+
+
+3. Hard:
+
+let secretWord = "";
+let letters = ["R", "A", "T"];
+for (let i = letters.length - 1; i >= 0; i--) {
+    secretWord += letters[i];
+}
+console.log(`Decoded word: ${secretWord}`);
