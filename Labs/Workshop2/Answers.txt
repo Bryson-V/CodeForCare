@@ -1,0 +1,29 @@
+Lab#1:
+
+    <div class="grid-container">
+
+        <div class="card">
+            <h3>Card 1</h3>
+            <button type="button">Button</button>
+        </div>
+
+        <div class="card">
+            <h3>Card 2</h3>
+            <button type="button">Button</button>
+        </div>
+
+        <div class="card">
+            <h3>Card 3</h3>
+            <button type="button">Button</button>
+        </div>
+
+    </div>
+    
+Lab#2:
+    1. left: 46px
+    2. height: 40px
+    3. background:rgb(0, 0, 1);
+    4. transform: rotate(90deg);
+
+Lab#3:
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class ="button" target = "_blank"> <button> solution button </button> </a>

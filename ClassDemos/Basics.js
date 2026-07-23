@@ -1,10 +1,12 @@
 console.log("Hello World");
 
-let x = 12;
+let x = "12";
 let y = 3;
 
+
+
 function first(param1, param2) {
-    return x / y;
+    return Number(x) / y;
 }
 
 let z = first(x,y);

@@ -1,4 +1,6 @@
 /*
+Don't need to Edit this file!
+
 Work for this lab will be done through index1.html
 What to do for this lab
     1. Create a grid containter
@@ -6,6 +8,9 @@ What to do for this lab
     3. Have an h3 and button in each card
 
 Hints:
+Remember a grid is a type of container.  so use <div class="grid"></div>
+Card elements are also a type of container, as they add a button.  So use <div class="card"></div>
+Remember that button is not just <button>, but <button type="button">
 */
 
 //Don't need to edit any of the below. 
