@@ -1,7 +1,7 @@
 /*
 Don't need to Edit this file!
 
-edit:
+Edit:
     Lab2.css
 What to do:
     1. Move the top left box 46px to the left. 
