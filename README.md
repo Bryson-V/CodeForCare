@@ -28,10 +28,10 @@ node Labs/Workshop3/server.js
 
 
 ## 📂 Project Directory Structure
-ClassDemos/ – Demonstration files and examples shown during class.
+ClassDemos/ – Demonstration files and examples shown during class.  Also contains SpotTheError and LogicPuzzles
 
-Labs/ – Contains exercises (Lab#.js), logic puzzles, and workshop directories (Workshop1, Workshop2, Workshop3).
+Labs/ – Contains Workshop directories (Workshop1, Workshop2, Workshop3).  Each workshop has exercises (Lab#.js)
 
-public/ & src/ – Frontend assets, static files, and application source code.
+public/ & src/ – Frontend assets, static files, and application source code.  Includes verifier (app.js) and main index.html
 
 server.js – Lightweight static Node.js web server.
