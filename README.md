@@ -15,16 +15,16 @@ This is a **package-free, zero-dependency** version of CodeForCare. No external 
    node server.js
 2. Access the application
    Open your web browser and naviage to
-   ```sh
+   ```
    http://localhost:3000/
    ```
 
-   ## 🛠️ Workshop Specifics
-   Workshop 3 includes its own package-free API server. To run it:
-   Launch the server directly from the Labs/Workshop3 directory:
-   ```
-   node Labs/Workshop3/server.js
-   ```
+## 🛠️ Workshop Specifics
+Workshop 3 includes its own package-free API server. To run it:
+Launch the server directly from the Labs/Workshop3 directory:
+```
+node Labs/Workshop3/server.js
+```
 
 
 ## 📂 Project Directory Structure
