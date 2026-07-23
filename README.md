@@ -1,23 +1,15 @@
-# NewCodeForCare
+# CodeForCare
 
-This is the package-free extracted version of CodeForCare.
+Welcome to **CodeForCare**! This project contains a series of interactive labs, workshops, and logic puzzles designed to help you build and test local web applications.
 
-Run it with Node only:
+---
 
-```sh
-node server.js
-```
+## 🚀 Quick Start
 
-Then open:
+This is a **package-free, zero-dependency** version of CodeForCare. No external npm packages are required—just standard Node.js!
 
-```text
-http://localhost:3000/
-```
+> ⚠️ **Note:** Do **not** run `npm install`.
 
-The root `server.js` only serves static files. Workshop 3 has its own package-free API server. Run that workshop directly from `Labs/Workshop3` with:
-
-```sh
-node server.js
-```
-
-Do not run npm install. No external packages are required.
+1. **Start the server:**
+   ```sh
+   node server.js
