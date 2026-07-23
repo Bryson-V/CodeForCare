@@ -1,0 +1,29 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+button {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  background-color: white;
+  color: black;
+}
+
+/* CSS SYNTAX
+  Selector (the tag in the front)
+  h1
+  { Decorators, they go inside the curly brackets {} of h1
+    color: blue;
+    text-align: center;
+  }  
+*/

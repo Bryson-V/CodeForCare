@@ -19,6 +19,7 @@ const MIME_TYPES = {
 
 let inventory = readInventory();
 
+// Reads the items in the current inventory in the JSON file
 function readInventory() {
     try {
         return JSON.parse(fs.readFileSync(INVENTORY_FILE, 'utf8'));
@@ -28,6 +29,7 @@ function readInventory() {
     }
 }
 
+// JSON descrption for all the available commands
 function sendJson(res, statusCode, data) {
     res.writeHead(statusCode, {
         'Content-Type': MIME_TYPES['.json'],
@@ -38,6 +40,7 @@ function sendJson(res, statusCode, data) {
     res.end(JSON.stringify(data, null, 2));
 }
 
+// Function to handle request for CRUD cycle
 function handleInventory(req, res) {
     if (req.method === 'OPTIONS') {
         sendJson(res, 204, null);
